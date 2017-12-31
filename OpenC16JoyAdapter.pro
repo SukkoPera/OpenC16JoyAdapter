@@ -1,11 +1,9 @@
-update=sab 15 lug 2017 15:53:12 CEST
+update=dom 31 dic 2017 18:06:51 CET
 version=1
 last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -58,3 +56,5 @@ LibName26=atmel
 LibName27=contrib
 LibName28=valves
 LibName29=/home/sukko/Documents/kicad/OpenC16JoyAdapter/74LS241
+[general]
+version=1

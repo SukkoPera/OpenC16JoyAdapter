@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name OpenC16JoyAdapter)(type KiCad)(uri "$(KIPRJMOD)/OpenC16JoyAdapter")(options "")(descr ""))
+)
