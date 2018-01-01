@@ -1,4 +1,16 @@
 # OpenC16JoyAdapter
-Open Hardware Joystick Adapter for C-16, C-116 and Plus/4
+OpenC16JoyAdapter is an Open Hardware Joystick Adapter for C-16, Plus/4 and the rest of the Commodore 264 family.
 
-Based on [work by Levente Hársfalvi](http://www.commodore.ca/manuals/funet/cbm/documents/projects/interfaces/plus4joy/plus4joy.html)
+![Board](https://raw.githubusercontent.com/SukkoPera/OpenC16JoyAdapter/master/doc/render-top.png)
+
+### Summary
+Based on work by Levente Hársfalvi
+
+### Installation
+TBD
+
+### Configuration
+TBD
+
+### License
+OpenC16JoyAdapter is Open Hardware.
