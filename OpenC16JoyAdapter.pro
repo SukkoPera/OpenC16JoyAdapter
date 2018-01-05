@@ -1,4 +1,4 @@
-update=dom 31 dic 2017 18:06:51 CET
+update=ven 05 gen 2018 14:33:56 CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -58,3 +58,13 @@ LibName28=valves
 LibName29=/home/sukko/Documents/kicad/OpenC16JoyAdapter/74LS241
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

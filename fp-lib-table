@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name OpenC16JoyAdapter)(type KiCad)(uri "$(KIPRJMOD)/OpenC16JoyAdapter")(options "")(descr ""))
+  (lib (name OpenC16Cart)(type KiCad)(uri /home/sukko/Documents/kicad/OpenC16Cart/OpenC16Cart.pretty)(options "")(descr ""))
 )

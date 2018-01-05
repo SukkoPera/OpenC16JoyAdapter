@@ -34,9 +34,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Open Joystick Adapter for C-16, C-116 and Plus/4"
-Date "2017-12-31"
-Rev "1.1"
+Title "OpenC16JoyAdapter: Open Joystick Adapter for C-16 and Plus/4"
+Date "2018-01-05"
+Rev "2"
 Comp "SukkoPera"
 Comment1 "http://www.commodore.ca/manuals/funet/cbm/documents/projects/interfaces/plus4joy/plus4joy.html"
 Comment2 "Based on work by Levente Hársfalvi"
@@ -530,4 +530,6 @@ Wire Wire Line
 	6850 3800 6850 3175
 Wire Wire Line
 	6750 3800 6750 3175
+Text Notes 4475 3100 0    60   ~ 0
+Short to enable pull-up\nresistors, i.e.: only leave open\nfor Sega Mega Drive controllers
 $EndSCHEMATC
