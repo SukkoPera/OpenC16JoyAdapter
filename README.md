@@ -4,7 +4,7 @@ OpenC16JoyAdapter is an Open Hardware Joystick Adapter for C-16, Plus/4 and the 
 ![Board](https://raw.githubusercontent.com/SukkoPera/OpenC16JoyAdapter/master/doc/render-top.png)
 
 ### Summary
-Based on [http://www.zimmers.net/anonftp/pub/cbm/documents/projects/interfaces/plus4joy/plus4joy.html](work by Levente Hársfalvi).
+Based on [work by Levente Hársfalvi](http://www.zimmers.net/anonftp/pub/cbm/documents/projects/interfaces/plus4joy/plus4joy.html).
 
 ### Installation
 TBD
