@@ -1,240 +1,59 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:74LS241
-LIBS:OpenC16JoyAdapter-cache
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "OpenC16JoyAdapter: Open Joystick Adapter for C-16 and Plus/4"
-Date "2018-01-05"
-Rev "2"
+Date "2024-01-27"
+Rev "3"
 Comp "SukkoPera"
 Comment1 "http://www.commodore.ca/manuals/funet/cbm/documents/projects/interfaces/plus4joy/plus4joy.html"
 Comment2 "Based on work by Levente Hársfalvi"
-Comment3 ""
+Comment3 "Licensed under CERN OHL v.1.2"
 Comment4 ""
 $EndDescr
 $Comp
-L 74LS244 U1
-U 1 1 596400F9
-P 5550 3800
-F 0 "U1" H 5875 4400 50  0000 C CNN
-F 1 "74LS244" H 5775 3200 50  0000 C CNN
-F 2 "pth_circuits:dil_20-300_socket" H 5550 3800 50  0001 C CNN
-F 3 "" H 5550 3800 50  0000 C CNN
-	1    5550 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L DB9 J1
-U 1 1 59640177
-P 2275 3700
-F 0 "J1" H 2275 4250 50  0000 C CNN
-F 1 "DB9 Male" H 2275 3150 50  0000 C CNN
-F 2 "conn_d-sub:DB_9M" H 2275 3700 50  0001 C CNN
-F 3 "" H 2275 3700 50  0000 C CNN
-	1    2275 3700
-	-1   0    0    1   
-$EndComp
-$Comp
-L +5V #PWR01
-U 1 1 59640215
-P 4450 2650
-F 0 "#PWR01" H 4450 2500 50  0001 C CNN
-F 1 "+5V" H 4450 2790 50  0000 C CNN
-F 2 "" H 4450 2650 50  0000 C CNN
-F 3 "" H 4450 2650 50  0000 C CNN
-	1    4450 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 5964022D
-P 4450 4600
-F 0 "#PWR02" H 4450 4350 50  0001 C CNN
-F 1 "GND" H 4450 4450 50  0000 C CNN
-F 2 "" H 4450 4600 50  0000 C CNN
-F 3 "" H 4450 4600 50  0000 C CNN
-	1    4450 4600
+P 4750 4600
+F 0 "#PWR02" H 4750 4350 50  0001 C CNN
+F 1 "GND" H 4750 4450 50  0000 C CNN
+F 2 "" H 4750 4600 50  0000 C CNN
+F 3 "" H 4750 4600 50  0000 C CNN
+	1    4750 4600
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X08 P1
-U 1 1 59640310
-P 9025 3650
-F 0 "P1" H 9025 4100 50  0000 C CNN
-F 1 "TO_C16_MINI_DIN_8" V 9125 3650 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 9025 3650 50  0001 C CNN
-F 3 "" H 9025 3650 50  0000 C CNN
-	1    9025 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR03
-U 1 1 59640615
-P 8225 2650
-F 0 "#PWR03" H 8225 2500 50  0001 C CNN
-F 1 "+5V" H 8225 2790 50  0000 C CNN
-F 2 "" H 8225 2650 50  0000 C CNN
-F 3 "" H 8225 2650 50  0000 C CNN
-	1    8225 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR04
-U 1 1 59640635
-P 8225 4700
-F 0 "#PWR04" H 8225 4450 50  0001 C CNN
-F 1 "GND" H 8225 4550 50  0000 C CNN
-F 2 "" H 8225 4700 50  0000 C CNN
-F 3 "" H 8225 4700 50  0000 C CNN
-	1    8225 4700
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_01X02 P2
+L Connector:Conn_01x02_Male SW1
 U 1 1 596A1CDA
-P 2275 2900
-F 0 "P2" H 2275 3050 50  0000 C CNN
-F 1 "PIN5_POWER" V 2375 2900 50  0000 C CNN
-F 2 "OpenC16JoyAdapter:Pin_Header_Straight_1x02-ModSilkS" H 2275 2900 50  0001 C CNN
-F 3 "" H 2275 2900 50  0000 C CNN
-	1    2275 2900
-	0    1    1    0   
+P 2070 2800
+F 0 "SW1" H 2043 2774 50  0000 R CNN
+F 1 "PIN5_POWER" H 2043 2683 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2070 2800 50  0001 C CNN
+F 3 "" H 2070 2800 50  0000 C CNN
+	1    2070 2800
+	1    0    0    -1  
 $EndComp
-Text Label 8325 3300 0    60   ~ 0
-c16_up
-Text Label 8325 3400 0    60   ~ 0
-c16_down
-Text Label 8325 3500 0    60   ~ 0
-c16_left
-Text Label 8325 3600 0    60   ~ 0
-c16_right
-Text Label 8325 3800 0    60   ~ 0
-c16_fire
-Text Label 8325 4000 0    60   ~ 0
-c16_select
-Text Label 2725 3300 0    60   ~ 0
-md_up
-Text Label 2725 3500 0    60   ~ 0
+Text Label 3035 3900 2    60   ~ 0
 md_down
-Text Label 2725 3700 0    60   ~ 0
+Text Label 3035 3700 2    60   ~ 0
 md_left
-Text Label 2725 3900 0    60   ~ 0
+Text Label 3035 3500 2    60   ~ 0
 md_right
-Text Label 2725 3400 0    60   ~ 0
-md_b_~a
-NoConn ~ 6250 3800
-NoConn ~ 6250 3900
-NoConn ~ 6250 4000
 $Comp
-L LED D1
-U 1 1 596A2963
-P 9750 3400
-F 0 "D1" H 9750 3500 50  0000 C CNN
-F 1 "LED" H 9750 3300 50  0000 C CNN
-F 2 "" H 9750 3400 50  0001 C CNN
-F 3 "" H 9750 3400 50  0000 C CNN
-	1    9750 3400
-	0    1    -1   0   
-$EndComp
-$Comp
-L R R6
-U 1 1 596A2AE8
-P 9750 3850
-F 0 "R6" V 9830 3850 50  0000 C CNN
-F 1 "680" V 9750 3850 50  0000 C CNN
-F 2 "" V 9680 3850 50  0001 C CNN
-F 3 "" H 9750 3850 50  0000 C CNN
-	1    9750 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR05
-U 1 1 596A2CAD
-P 9750 3150
-F 0 "#PWR05" H 9750 3000 50  0001 C CNN
-F 1 "+5V" H 9750 3290 50  0000 C CNN
-F 2 "" H 9750 3150 50  0000 C CNN
-F 3 "" H 9750 3150 50  0000 C CNN
-	1    9750 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR06
-U 1 1 596A2CD9
-P 9750 4100
-F 0 "#PWR06" H 9750 3850 50  0001 C CNN
-F 1 "GND" H 9750 3950 50  0000 C CNN
-F 2 "" H 9750 4100 50  0000 C CNN
-F 3 "" H 9750 4100 50  0000 C CNN
-	1    9750 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C1
+L Device:C C1
 U 1 1 596A2F06
 P 10375 3600
-F 0 "C1" H 10400 3700 50  0000 L CNN
-F 1 "100n" H 10400 3500 50  0000 L CNN
-F 2 "OpenC16JoyAdapter:C_0805+THT" H 10413 3450 50  0001 C CNN
+F 0 "C1" H 10490 3646 50  0000 L CNN
+F 1 "100n" H 10490 3555 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 10413 3450 50  0001 C CNN
 F 3 "" H 10375 3600 50  0000 C CNN
 	1    10375 3600
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
-U 1 1 596A3CE6
-P 6400 4350
-F 0 "#PWR07" H 6400 4100 50  0001 C CNN
-F 1 "GND" H 6400 4200 50  0000 C CNN
-F 2 "" H 6400 4350 50  0000 C CNN
-F 3 "" H 6400 4350 50  0000 C CNN
-	1    6400 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR08
-U 1 1 596A3F1E
-P 6400 4100
-F 0 "#PWR08" H 6400 3950 50  0001 C CNN
-F 1 "+5V" H 6400 4240 50  0000 C CNN
-F 2 "" H 6400 4100 50  0000 C CNN
-F 3 "" H 6400 4100 50  0000 C CNN
-	1    6400 4100
-	1    0    0    -1  
-$EndComp
-$Comp
-L +5V #PWR09
+L power:+5V #PWR09
 U 1 1 596A41AD
 P 10375 3350
 F 0 "#PWR09" H 10375 3200 50  0001 C CNN
@@ -245,7 +64,7 @@ F 3 "" H 10375 3350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 596A41DC
 P 10375 3900
 F 0 "#PWR010" H 10375 3650 50  0001 C CNN
@@ -255,15 +74,13 @@ F 3 "" H 10375 3900 50  0000 C CNN
 	1    10375 3900
 	1    0    0    -1  
 $EndComp
-Text Label 2725 3600 0    60   ~ 0
-md_select
-Text Label 2725 4000 0    60   ~ 0
-md_c_~start
-NoConn ~ 3300 4000
-Text Notes 1950 2600 0    60   ~ 0
+Text Label 3035 3400 2    60   ~ 0
+md_c_start
+NoConn ~ 3035 3400
+Text Notes 2215 2690 2    60   ~ 0
 Short for Sega Mega\nDrive controllers, leave\nopen otherwise
 $Comp
-L +5V #PWR011
+L power:+5V #PWR011
 U 1 1 59CADFEF
 P 10475 800
 F 0 "#PWR011" H 10475 650 50  0001 C CNN
@@ -274,7 +91,7 @@ F 3 "" H 10475 800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR012
+L power:GND #PWR012
 U 1 1 59CAE036
 P 10900 925
 F 0 "#PWR012" H 10900 675 50  0001 C CNN
@@ -285,7 +102,7 @@ F 3 "" H 10900 925 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG013
+L power:PWR_FLAG #FLG013
 U 1 1 59CAE07F
 P 10900 825
 F 0 "#FLG013" H 10900 920 50  0001 C CNN
@@ -296,7 +113,7 @@ F 3 "" H 10900 825 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG014
+L power:PWR_FLAG #FLG014
 U 1 1 59CAE0CD
 P 10475 900
 F 0 "#FLG014" H 10475 995 50  0001 C CNN
@@ -307,229 +124,357 @@ F 3 "" H 10475 900 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN_01X01 P3
+L void:Void V0
 U 1 1 59CADB6A
-P 10600 6275
-F 0 "P3" H 10600 6375 50  0000 C CNN
-F 1 "OSHW_LOGO_PLACEHOLDER" V 10700 6275 50  0000 C CNN
-F 2 "w_logo:Logo_copper_OSHW_6x6mm" H 10600 6275 50  0001 C CNN
-F 3 "" H 10600 6275 50  0000 C CNN
-	1    10600 6275
+P 10595 6400
+F 0 "V0" V 10549 6478 50  0000 L CNN
+F 1 "OSHW_LOGO" V 10640 6478 50  0000 L CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_Copper" H 10595 6400 50  0001 C CNN
+F 3 "" H 10595 6400 50  0000 C CNN
+	1    10595 6400
 	0    1    1    0   
 $EndComp
-NoConn ~ 10600 6075
 $Comp
-L R_Network05 RN1
+L Device:R_Network05 RN1
 U 1 1 5A45976E
 P 3550 3000
-F 0 "RN1" V 3250 3000 50  0000 C CNN
-F 1 "10k" V 3850 3000 50  0000 C CNN
-F 2 "Resistors_THT:R_Array_SIP6" V 3925 3000 50  0001 C CNN
+F 0 "RN1" H 3270 3046 50  0000 R CNN
+F 1 "10k" H 3270 2955 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 3925 3000 50  0001 C CNN
 F 3 "" H 3550 3000 50  0001 C CNN
 	1    3550 3000
 	-1   0    0    -1  
 $EndComp
-$Comp
-L CONN_01X02 P4
-U 1 1 5A459F9B
-P 4150 3000
-F 0 "P4" H 4150 3150 50  0000 C CNN
-F 1 "PULL_UP" V 4250 3000 50  0000 C CNN
-F 2 "OpenC16JoyAdapter:Pin_Header_Straight_1x02-ModSilkS" H 4150 3000 50  0001 C CNN
-F 3 "" H 4150 3000 50  0000 C CNN
-	1    4150 3000
-	0    1    1    0   
-$EndComp
-$Comp
-L R_Pack05_SIP RN2
-U 1 1 5A45A4EC
-P 7350 2975
-F 0 "RN2" V 6650 3025 50  0000 C CNN
-F 1 "100" V 8150 3025 50  0000 C CNN
-F 2 "Resistors_THT:R_Array_SIP10" V 8225 2975 50  0001 C CNN
-F 3 "" H 7350 2975 50  0001 C CNN
-	1    7350 2975
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2725 3500 4850 3500
-Wire Wire Line
-	2725 3400 4850 3400
-Wire Wire Line
-	4450 3600 2725 3600
-Wire Wire Line
-	2325 2650 4450 2650
-Wire Wire Line
-	4450 2650 4450 3600
-Wire Wire Line
-	8050 3300 8825 3300
-Wire Wire Line
-	7750 3400 8825 3400
-Wire Wire Line
-	7450 3500 8825 3500
-Wire Wire Line
-	7150 3600 8825 3600
-Wire Wire Line
-	8825 3700 8225 3700
-Wire Wire Line
-	8225 3700 8225 2650
-Wire Wire Line
-	6850 3800 8825 3800
-Wire Wire Line
-	8825 3900 8225 3900
-Wire Wire Line
-	8225 3900 8225 4700
-Wire Wire Line
-	4750 4600 6650 4600
-Wire Wire Line
-	6650 4600 6650 4000
-Wire Wire Line
-	6650 4000 8825 4000
-Wire Wire Line
-	2725 3300 4850 3300
-Wire Wire Line
-	2725 3800 4450 3800
 Wire Wire Line
 	4750 3900 4850 3900
 Wire Wire Line
-	4750 4200 4850 4200
+	4650 4200 4850 4200
 Wire Wire Line
-	4750 4200 4750 4600
+	4650 4200 4650 4300
 Wire Wire Line
-	4850 4300 4750 4300
-Connection ~ 4750 4300
+	4850 4300 4650 4300
+Connection ~ 4650 4300
 Wire Wire Line
-	2725 3700 4550 3700
-Wire Wire Line
-	4550 3700 4550 3600
-Wire Wire Line
-	4550 3600 4850 3600
-Wire Wire Line
-	2725 3900 4650 3900
-Wire Wire Line
-	4650 3900 4650 3700
-Wire Wire Line
-	4650 3700 4850 3700
-Wire Wire Line
-	2325 2700 2325 2650
-Connection ~ 4450 2650
-Wire Wire Line
-	2225 2700 2225 2650
-Wire Wire Line
-	2225 2650 1925 2650
-Wire Wire Line
-	1925 2650 1925 4400
-Wire Wire Line
-	1925 4400 2825 4400
-Wire Wire Line
-	2825 4400 2825 4100
-Wire Wire Line
-	2825 4100 2725 4100
-Wire Wire Line
-	4450 3800 4450 4600
+	2460 2615 2460 2565
 Wire Wire Line
 	4750 3800 4850 3800
 Wire Wire Line
-	4450 4000 4850 4000
-Wire Wire Line
-	4750 3800 4750 4000
+	4750 3800 4750 3900
 Connection ~ 4750 3900
-Connection ~ 4450 4000
 Connection ~ 4750 4000
-Wire Wire Line
-	6250 3300 7950 3300
-Wire Wire Line
-	6250 3500 6450 3500
-Wire Wire Line
-	6450 3500 6450 3400
-Wire Wire Line
-	6250 3600 6550 3600
-Wire Wire Line
-	6550 3600 6550 3500
-Wire Wire Line
-	6550 3500 7350 3500
-Wire Wire Line
-	6650 3700 6250 3700
-Wire Wire Line
-	6650 3600 6650 3700
-Wire Wire Line
-	6650 3600 7050 3600
-Wire Wire Line
-	6250 3400 6350 3400
-Wire Wire Line
-	6350 3400 6350 3800
-Wire Wire Line
-	6350 3800 6750 3800
-Wire Wire Line
-	9750 3700 9750 3550
-Wire Wire Line
-	9750 3250 9750 3150
-Wire Wire Line
-	9750 4000 9750 4100
-Wire Wire Line
-	6250 4200 6400 4200
-Wire Wire Line
-	6400 4200 6400 4100
-Wire Wire Line
-	6250 4300 6400 4300
-Wire Wire Line
-	6400 4300 6400 4350
 Wire Wire Line
 	10375 3900 10375 3750
 Wire Wire Line
 	10375 3450 10375 3350
-Wire Wire Line
-	2725 4000 3300 4000
 Wire Wire Line
 	10475 900  10475 800 
 Wire Wire Line
 	10900 825  10900 925 
 Wire Wire Line
 	3350 3200 3350 3300
-Connection ~ 3350 3300
 Wire Wire Line
 	3450 3200 3450 3400
+Wire Wire Line
+	4750 3900 4750 4000
+Wire Wire Line
+	4750 4000 4750 4600
+Wire Wire Line
+	4750 4000 4850 4000
+Wire Wire Line
+	3350 3300 4850 3300
+Wire Wire Line
+	3450 3400 4850 3400
+Wire Wire Line
+	3750 2650 3750 2800
+$Comp
+L power:+5V #PWR0101
+U 1 1 65B61C22
+P 3750 2650
+F 0 "#PWR0101" H 3750 2500 50  0001 C CNN
+F 1 "+5V" H 3750 2790 50  0000 C CNN
+F 2 "" H 3750 2650 50  0000 C CNN
+F 3 "" H 3750 2650 50  0000 C CNN
+	1    3750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 65B6259D
+P 2460 2565
+F 0 "#PWR0102" H 2460 2415 50  0001 C CNN
+F 1 "+5V" H 2460 2705 50  0000 C CNN
+F 2 "" H 2460 2565 50  0000 C CNN
+F 3 "" H 2460 2565 50  0000 C CNN
+	1    2460 2565
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3800 6350 3175
+Wire Wire Line
+	6450 3800 6450 3175
+Wire Wire Line
+	6650 3600 6650 3175
+Wire Wire Line
+	6750 3600 6750 3175
+Wire Wire Line
+	6950 3500 6950 3175
+Wire Wire Line
+	7050 3500 7050 3175
+Wire Wire Line
+	7250 3400 6050 3400
+Wire Wire Line
+	7250 3175 7250 3400
+Wire Wire Line
+	7350 3175 7350 3400
+Wire Wire Line
+	7550 3300 7550 3175
+Wire Wire Line
+	7650 3175 7650 3300
+Wire Wire Line
+	5350 3000 5350 2900
+Wire Wire Line
+	5950 3800 6350 3800
+Wire Wire Line
+	5950 3400 5950 3800
+Wire Wire Line
+	5850 3400 5950 3400
+Wire Wire Line
+	6250 3600 6650 3600
+Wire Wire Line
+	6250 3600 6250 3700
+Wire Wire Line
+	6250 3700 5850 3700
+Wire Wire Line
+	6150 3500 6950 3500
+Wire Wire Line
+	6150 3600 6150 3500
+Wire Wire Line
+	5850 3600 6150 3600
+Wire Wire Line
+	6050 3500 6050 3400
+Wire Wire Line
+	5850 3500 6050 3500
+Wire Wire Line
+	5850 3300 7550 3300
+Wire Wire Line
+	6250 4000 8425 4000
+Wire Wire Line
+	7825 3900 7825 4700
+Wire Wire Line
+	8425 3900 7825 3900
+Wire Wire Line
+	6450 3800 8425 3800
+Wire Wire Line
+	7825 3700 7825 2650
+Wire Wire Line
+	8425 3700 7825 3700
+Wire Wire Line
+	6750 3600 8425 3600
+Wire Wire Line
+	7050 3500 8425 3500
+Wire Wire Line
+	7350 3400 8425 3400
+Wire Wire Line
+	7650 3300 8425 3300
+$Comp
+L power:+5V #PWR08
+U 1 1 596A3F1E
+P 5350 2900
+F 0 "#PWR08" H 5350 2750 50  0001 C CNN
+F 1 "+5V" H 5350 3040 50  0000 C CNN
+F 2 "" H 5350 2900 50  0000 C CNN
+F 3 "" H 5350 2900 50  0000 C CNN
+	1    5350 2900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5850 4000
+NoConn ~ 5850 3900
+NoConn ~ 5850 3800
+Text Label 7925 4000 0    60   ~ 0
+c16_select
+Text Label 7925 3800 0    60   ~ 0
+c16_fire
+Text Label 7925 3600 0    60   ~ 0
+c16_right
+Text Label 7925 3500 0    60   ~ 0
+c16_left
+Text Label 7925 3400 0    60   ~ 0
+c16_down
+Text Label 7925 3300 0    60   ~ 0
+c16_up
+$Comp
+L power:GND #PWR04
+U 1 1 59640635
+P 7825 4700
+F 0 "#PWR04" H 7825 4450 50  0001 C CNN
+F 1 "GND" H 7825 4550 50  0000 C CNN
+F 2 "" H 7825 4700 50  0000 C CNN
+F 3 "" H 7825 4700 50  0000 C CNN
+	1    7825 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS244 U1
+U 1 1 65B63CCD
+P 5350 3800
+F 0 "U1" H 5560 4460 50  0000 C CNN
+F 1 "74LS244" H 5565 3140 50  0000 C CNN
+F 2 "Package_DIP:DIP-20_W7.62mm_Socket_LongPads" H 5350 3800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74ls244.pdf" H 5350 3800 50  0001 C CNN
+	1    5350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4600 5350 4690
+$Comp
+L power:GND #PWR0103
+U 1 1 65B8FAC7
+P 5350 4690
+F 0 "#PWR0103" H 5350 4440 50  0001 C CNN
+F 1 "GND" H 5350 4540 50  0000 C CNN
+F 2 "" H 5350 4690 50  0000 C CNN
+F 3 "" H 5350 4690 50  0000 C CNN
+	1    5350 4690
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 5015 6250 5015
+Wire Wire Line
+	4650 4300 4650 5015
+Wire Wire Line
+	6250 4000 6250 5015
+$Comp
+L power:+5V #PWR0104
+U 1 1 65B99A7D
+P 7825 2650
+F 0 "#PWR0104" H 7825 2500 50  0001 C CNN
+F 1 "+5V" H 7840 2823 50  0000 C CNN
+F 2 "" H 7825 2650 50  0001 C CNN
+F 3 "" H 7825 2650 50  0001 C CNN
+	1    7825 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack05_SIP RN2
+U 1 1 65B9ACA3
+P 6950 2975
+F 0 "RN2" H 7004 3317 50  0000 C CNN
+F 1 "100" H 7004 3226 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 7825 2975 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 6950 2975 50  0001 C CNN
+	1    6950 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 65B9F997
+P 8625 3600
+F 0 "J2" H 8597 3574 50  0000 R CNN
+F 1 "TO_C16_MINI_DIN_8" H 8597 3483 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8625 3600 50  0001 C CNN
+F 3 "~" H 8625 3600 50  0001 C CNN
+	1    8625 3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2335 3400 3035 3400
+$Comp
+L Connector:DB9_Male_MountingHoles J1
+U 1 1 65BAE082
+P 2035 3700
+F 0 "J1" H 2214 3702 50  0000 L CNN
+F 1 "DB9_MALE" H 2214 3611 50  0000 L CNN
+F 2 "OpenC16JoyAdapter:DB_9M" H 2035 3700 50  0001 C CNN
+F 3 " ~" H 2035 3700 50  0001 C CNN
+	1    2035 3700
+	-1   0    0    -1  
+$EndComp
+Text Label 3035 4100 2    60   ~ 0
+md_up
+Text Label 3035 4000 2    60   ~ 0
+md_b_~a
+Wire Wire Line
+	2335 4100 3350 4100
+Wire Wire Line
+	3350 3300 3350 4100
+Connection ~ 3350 3300
+Wire Wire Line
+	2335 3800 2505 3800
+Wire Wire Line
+	2335 3300 2415 3300
+Wire Wire Line
+	2415 3300 2415 2900
+Wire Wire Line
+	2415 2900 2270 2900
+Wire Wire Line
+	2505 2615 2505 3800
+Wire Wire Line
+	2270 2800 2415 2800
+Wire Wire Line
+	2415 2800 2415 2615
+Wire Wire Line
+	2415 2615 2460 2615
+Connection ~ 2460 2615
+Wire Wire Line
+	2460 2615 2505 2615
+Wire Wire Line
+	2415 3600 2335 3600
+Wire Wire Line
+	3450 3400 3450 4000
+Wire Wire Line
+	2335 4000 3450 4000
 Connection ~ 3450 3400
 Wire Wire Line
+	2035 4300 2035 4350
+$Comp
+L power:GND #PWR0105
+U 1 1 65C07B24
+P 2035 4390
+F 0 "#PWR0105" H 2035 4140 50  0001 C CNN
+F 1 "GND" H 2035 4240 50  0000 C CNN
+F 2 "" H 2035 4390 50  0000 C CNN
+F 3 "" H 2035 4390 50  0000 C CNN
+	1    2035 4390
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2415 3600 2415 4350
+Wire Wire Line
+	2415 4350 2035 4350
+Connection ~ 2035 4350
+Wire Wire Line
+	2035 4350 2035 4390
+Wire Wire Line
+	3650 3200 3650 3600
+Wire Wire Line
+	2335 3500 3255 3500
+Text Notes 4810 3675 0    60   ~ 0
+u\nf\nd\nl\nr
+Wire Wire Line
+	2335 3700 3165 3700
+Wire Wire Line
 	3550 3200 3550 3500
+Wire Wire Line
+	2335 3900 3550 3900
+Wire Wire Line
+	4850 3500 3550 3500
 Connection ~ 3550 3500
 Wire Wire Line
-	3650 3200 3650 3700
-Connection ~ 3650 3700
+	3550 3500 3550 3900
 Wire Wire Line
-	3750 3200 3750 3900
-Connection ~ 3750 3900
+	3750 3200 3750 3700
+Connection ~ 3650 3600
 Wire Wire Line
-	3750 2800 3750 2725
+	3650 3600 4850 3600
 Wire Wire Line
-	3750 2725 4100 2725
+	3750 3700 4850 3700
 Wire Wire Line
-	4100 2725 4100 2800
+	3650 3600 3165 3600
 Wire Wire Line
-	4200 2800 4200 2650
-Connection ~ 4200 2650
+	3165 3600 3165 3700
 Wire Wire Line
-	8050 3175 8050 3300
+	3750 3700 3255 3700
 Wire Wire Line
-	7950 3300 7950 3175
-Wire Wire Line
-	7750 3175 7750 3400
-Wire Wire Line
-	7650 3175 7650 3400
-Wire Wire Line
-	7650 3400 6450 3400
-Wire Wire Line
-	7450 3500 7450 3175
-Wire Wire Line
-	7350 3500 7350 3175
-Wire Wire Line
-	7150 3600 7150 3175
-Wire Wire Line
-	7050 3600 7050 3175
-Wire Wire Line
-	6850 3800 6850 3175
-Wire Wire Line
-	6750 3800 6750 3175
-Text Notes 4475 3100 0    60   ~ 0
-Short to enable pull-up\nresistors, i.e.: only leave open\nfor Sega Mega Drive controllers
+	3255 3700 3255 3500
+Connection ~ 3750 3700
 $EndSCHEMATC
