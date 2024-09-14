@@ -10,8 +10,8 @@ Rev "3"
 Comp "SukkoPera"
 Comment1 "http://www.commodore.ca/manuals/funet/cbm/documents/projects/interfaces/plus4joy/plus4joy.html"
 Comment2 "Based on work by Levente Hársfalvi (TLC)"
-Comment3 "Licensed under CERN OHL v.1.2"
-Comment4 ""
+Comment3 "Light pen circuit by LaViNa, Paul and Sacek of GOTU"
+Comment4 "Licensed under CERN OHL v.1.2"
 $EndDescr
 $Comp
 L power:GND #PWR02
@@ -76,7 +76,6 @@ F 3 "" H 14175 3750 50  0000 C CNN
 $EndComp
 Text Label 5835 2700 2    60   ~ 0
 md_c_start
-NoConn ~ 5835 2700
 Text Notes 5015 1990 2    60   ~ 0
 Short for Sega Mega\nDrive controllers, leave\nopen otherwise
 $Comp
@@ -134,17 +133,6 @@ F 3 "" H 15245 9650 50  0000 C CNN
 	1    15245 9650
 	0    1    1    0   
 $EndComp
-$Comp
-L Device:R_Network05 RN1
-U 1 1 5A45976E
-P 6350 2300
-F 0 "RN1" H 6070 2346 50  0000 R CNN
-F 1 "10k" H 6070 2255 50  0000 R CNN
-F 2 "Resistor_THT:R_Array_SIP6" V 6725 2300 50  0001 C CNN
-F 3 "" H 6350 2300 50  0001 C CNN
-	1    6350 2300
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7095 3200 7195 3200
 Wire Wire Line
@@ -185,16 +173,16 @@ Wire Wire Line
 Wire Wire Line
 	6250 2700 7195 2700
 Wire Wire Line
-	6550 1950 6550 2100
+	6150 1950 6150 2100
 $Comp
 L power:+5V #PWR0101
 U 1 1 65B61C22
-P 6550 1950
-F 0 "#PWR0101" H 6550 1800 50  0001 C CNN
-F 1 "+5V" H 6550 2090 50  0000 C CNN
-F 2 "" H 6550 1950 50  0000 C CNN
-F 3 "" H 6550 1950 50  0000 C CNN
-	1    6550 1950
+P 6150 1950
+F 0 "#PWR0101" H 6150 1800 50  0001 C CNN
+F 1 "+5V" H 6150 2090 50  0000 C CNN
+F 2 "" H 6150 1950 50  0000 C CNN
+F 3 "" H 6150 1950 50  0000 C CNN
+	1    6150 1950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -477,25 +465,12 @@ Wire Wire Line
 Connection ~ 6550 3000
 $Comp
 L Device:R R?
-U 1 1 66E70DD1
-P 7350 6600
-AR Path="/66E4FBCD/66E70DD1" Ref="R?"  Part="1" 
-AR Path="/66E70DD1" Ref="R2"  Part="1" 
-F 0 "R2" H 7420 6646 50  0000 L CNN
-F 1 "10k" H 7420 6555 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7280 6600 50  0001 C CNN
-F 3 "~" H 7350 6600 50  0001 C CNN
-	1    7350 6600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
 U 1 1 66E70DD7
 P 8500 7200
 AR Path="/66E4FBCD/66E70DD7" Ref="R?"  Part="1" 
 AR Path="/66E70DD7" Ref="R3"  Part="1" 
-F 0 "R3" H 8570 7246 50  0000 L CNN
-F 1 "18k" H 8570 7155 50  0000 L CNN
+F 0 "R3" H 8430 7246 50  0000 R CNN
+F 1 "18k" H 8430 7155 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8430 7200 50  0001 C CNN
 F 3 "~" H 8500 7200 50  0001 C CNN
 	1    8500 7200
@@ -709,4 +684,28 @@ Wire Wire Line
 	5750 7750 6250 7750
 Text Label 9000 6450 0    60   ~ 0
 md_b_~a
+$Comp
+L Device:R R?
+U 1 1 66E70DD1
+P 7350 6600
+AR Path="/66E4FBCD/66E70DD1" Ref="R?"  Part="1" 
+AR Path="/66E70DD1" Ref="R2"  Part="1" 
+F 0 "R2" H 7280 6554 50  0000 R CNN
+F 1 "10k" H 7280 6645 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 7280 6600 50  0001 C CNN
+F 3 "~" H 7350 6600 50  0001 C CNN
+	1    7350 6600
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R_Network05 RN1
+U 1 1 5A45976E
+P 6350 2300
+F 0 "RN1" H 6070 2346 50  0000 R CNN
+F 1 "10k" H 6070 2255 50  0000 R CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 6725 2300 50  0001 C CNN
+F 3 "" H 6350 2300 50  0001 C CNN
+	1    6350 2300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
